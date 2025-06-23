@@ -579,64 +579,85 @@ span {
 
 /* Devices ≤ 1200px (Laptops/Small Desktops) */
 /* Responsive Design */
-@media (max-width: 1200px) {
-    html { font-size: 58%; }
-    .Services-container .Services-box { flex: 1 1 calc(33.333% - 20px); }
+@media (max-width:1200px){
+html{
+font-size:55%;
 }
-
-@media (max-width: 992px) {
-    html { font-size: 55%; }
-    .home { flex-direction: column; text-align: center; }
-    .home-content { margin-left: 0; margin-top: 3rem; }
-    .home-img img { width: 40vw; margin-bottom: 2rem; }
-    .navbar a { margin-left: 2rem; }
-    .Services-container .Services-box { flex: 1 1 calc(45% - 20px); }
-    .skills-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
 }
-
-@media (max-width: 768px) {
-    #menu-icon { display: block; }
-    .navbar {
-        position: absolute;
-        top: 100%;
-        right: -100%;
-        width: 50%; /* Adjusted width for better visibility */
-        background: var(--main-color);
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        transition: right 0.3s ease; /* Smooth slide animation */
-    }
-    .navbar.active {
-        display: flex;
-        right: 0; /* Slide in from right */
-    }
-    .navbar a {
-        margin: 0;
-        padding: 1rem;
-        font-size: 2rem;
-        display: block;
-        width: 100%;
-        text-align: center;
-    }
-    .about { flex-direction: column; text-align: center; }
-    .Services-container .Services-box { flex: 1 1 100%; }
-    .certificate-box img { width: 100%; }
-    .container { padding: 0 10px; }
-    .header { flex-direction: row; align-items: center; }
+@media (max-width:991px){
+.header {
+padding:2rem 3%;
 }
+section{
+padding:10rem 3%;
+}
+.projects{
+padding:7rem;
+} 
+.certificate{
+grid-template-columns: repeat(1,1fr);
+}
+}
+@media(max-width:991px){
+#menu-icon{
+display:block;
 
-@media (max-width: 576px) {
-    html { font-size: 50%; }
-    .home-content h1 { font-size: 4.5rem; }
-    .home-content h3 { font-size: 2.8rem; }
-    .heading { font-size: 3rem; }
-    .Services-box h3 { font-size: 2rem; }
-    .certificate-box h3 { font-size: 1.6rem; }
-    .certificate-box p { font-size: 1.2rem; }
-    .skills-section h2 { text-align: center; }
-    .skill-header { flex-direction: column; align-items: flex-start; }
-    .skill-percentage { margin-top: 0.5rem; }
-    .navbar { width: 70%; } 
+}
+.navbar{
+position:absolute;
+top:100%;
+right:-100%;
+width:255px;
+min-height:100vh;
+display:flex;
+flex-direction:column;
+background:var(--main-color);
+transition:all 0.5s ease;
+backdrop-filter:blur(10px);
+}
+.navbar a {
+    display: block;
+    padding: 17px;
+    font-size: 22px;
+}
+.navbar.active {
+    right: 0;
+}
+.home{
+    flex-direction: column;
+}
+.home-content h3{
+    font-size: 2.5rem;
     
 }
+.home-content h1{
+    font-size: 5rem;
+}
+.home-content{
+    order: 2;
+    margin-left: 1rem;
+}
+.home-img img{
+    width: 70vw;
+    margin-top: 4rem;
+}
+.about{
+    flex-direction: column-reverse;
+}
+.projects h2{
+    margin-bottom: 3rem;
+}
+}
+@media(max-width:617px){
+.home-img img{
+    width: 70vw;
+    margin-top: 8rem;
+}
+}
+@media(max-width:617px){
+html{
+font-size:50%;
+}
+}
+
+
